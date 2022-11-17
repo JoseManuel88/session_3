@@ -1,0 +1,6 @@
+<img *ngIf="!films" width="200px" src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700" alt="gif loading"/>
+
+<ng-template [ngIf] = "films">
+    <app-card *ngFor="let film of films" [pelicula] = "film" (peliculaId)="recogerId($event)"></app-card>
+</ng-template>
+
